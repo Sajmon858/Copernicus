@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pogotowie Ratunkowe RP - System KMCR i Faktur</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>Pogotowie Ratunkowe RP</h1>
+<p>System KMCR i Faktur</p>
+</header>
+
+<nav>
+<button onclick="showTab('kmcr')">KMCR</button>
+<button onclick="showTab('faktura')">Faktury</button>
+</nav>
+
+<section id="kmcr">
+<h2>Karta Medycznych Czynności Ratunkowych</h2>
+<div class="card">
+<input id="imie" placeholder="Imię">
+<input id="nazwisko" placeholder="Nazwisko">
+<input id="wiek" placeholder="Wiek/Data urodzenia">
+<textarea id="sample" placeholder="SAMPLE"></textarea>
+<textarea id="acvpu" placeholder="ACVPU"></textarea>
+<input id="miejsce" placeholder="Miejsce zdarzenia">
+<input id="rozpoznanie" placeholder="Rozpoznanie">
+<input id="tetno" placeholder="Tętno">
+<input id="cisnienie" placeholder="Ciśnienie">
+<input id="saturacja" placeholder="Saturacja">
+<textarea id="czynnosci" placeholder="Wykonane czynności"></textarea>
+<input id="kierownik" placeholder="Kierownik zespołu">
+<button onclick="sendKMCR()">Wyślij KMCR</button>
+</div>
+</section>
+
+<section id="faktura" style="display:none">
+<h2>Faktura</h2>
+<div class="card">
+<input id="f_imie" placeholder="Imię">
+<input id="f_nazwisko" placeholder="Nazwisko">
+<input id="powod" placeholder="Powód">
+<input id="kwota" placeholder="Kwota">
+<input id="wystawiajacy" placeholder="Wystawiający">
+<input id="data" placeholder="Data">
+<button onclick="sendInvoice()">Wyślij Fakturę</button>
+</div>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>
